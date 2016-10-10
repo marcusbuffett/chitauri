@@ -1,7 +1,7 @@
 name:                chitauri
 version:             0.1.0.1
 synopsis:            Helper for the Major System
-description:         Please see README.md
+description:         https://github.com/marcusbuffett/chitauri
 homepage:            https://github.com/marcusbuffett/chitauri
 license:             BSD3
 license-file:        LICENSE
@@ -17,7 +17,7 @@ executable chitauri
   hs-source-dirs:      app, src
   main-is:             Main.hs
   ghc-options:         -threaded -rtsopts -with-rtsopts=-N
-  build-depends:       base,
+  build-depends:       base >= 4.7 && < 5,
                        either-unwrap,
                        generic-trie,
                        haskeline,
