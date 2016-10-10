@@ -15,6 +15,7 @@ import PhoneticDictionary (PhoneticDictionary)
 import Phoneme (charsToPhoneme)
 import PhoneticWord (PhoneticWord(..))
 import MajorSystem(phonemeToNumber)
+import Paths_chitauri (getDataFileName)
 
 parseDictionary :: String -> Either ParseError PhoneticDictionary
 parseDictionary dict = do
@@ -28,7 +29,8 @@ wordsToDictionary ws = fromListWith combineEntries $ fmap wordToTuple ws
     combineEntries xs ys = sortBy (compare `on` (length . word)) $ xs ++ ys
 
 dictionary :: IO String
-dictionary = readFile "assets/dict.txt"
+dictionary = getDataFileName "assets/dict.txt" >>= readFile 
+{- dictionary = readFile "assets/dict.txt"  -}
 
 phonemesParser = many1 (char ' ') *> sepBy phonemeParser (char ' ') 
 phonemeParser = many1 upper <* skipMany digit
