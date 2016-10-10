@@ -9,7 +9,7 @@ their phonemes.
 ## How?
 
   - Uses the monadic parser combinator library [parsec][3] to parse the CMU dict
-  - Constructs a Trie, where the keys are `[Int]` and the values at the nodes are `[PhoneticWord]`
+  - Constructs a Trie, where the keys are of type `[Int]` and the values at the nodes are of type `[PhoneticWord]`
   - Uses [haskeline][4] to read input and support readline niceties like ctrl-p / ctrl-n
 
 ## Where?
