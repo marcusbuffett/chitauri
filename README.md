@@ -12,6 +12,17 @@ their phonemes.
   - Constructs a Trie, where the keys are `[Int]` and the values at the nodes are `[PhoneticWord]`
   - Uses [haskeline][4] to read input and support readline niceties like ctrl-p / ctrl-n
 
+## Where?
+
+chitauri is hosted on hackage, and so can be downloaded with
+```bash
+cabal install chitauri
+```
+or
+```bash
+stack install chitauri
+```
+
 ## Why?
 
 The major system is really helpful for remembering numbers, but it's often hard to think of words, especially when first learning the system. I thought it would be useful to have a tool that could spit out candidates for a given number.
